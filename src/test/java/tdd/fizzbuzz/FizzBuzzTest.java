@@ -8,28 +8,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {
 
-    FizzBuzz fizzBuzz;
+    static FizzBuzz fizzBuzz;
     String FIZZ = "Fizz";
     String BUZZ = "Buzz";
     String WHIZZ = "Whizz";
+    @BeforeAll
+    static void setup(){
+        fizzBuzz = new FizzBuzz();
+    }
 
     @Test
     void should_return_output_number_or_fizzbuzzwhen_when_number_given_value() {
         //given
-        fizzBuzz = new FizzBuzz();
-        int secondNumber = 5;
-        int thirdNumber  = 7;
         int fourthNumber = 105;
-        int fifthNumber = 15;
-        int sixthNumber = 15;
         //when
-        String secondOutput = fizzBuzz.countOff(secondNumber);
-        String thirdOutput = fizzBuzz.countOff(thirdNumber);
         String fourthOutput = fizzBuzz.countOff(fourthNumber);
 
         //then
-        assertEquals(BUZZ, secondOutput);
-        assertEquals(WHIZZ, thirdOutput);
         assertEquals(FIZZ+BUZZ+WHIZZ, fourthOutput);
 
     }
@@ -45,6 +40,39 @@ public class FizzBuzzTest {
 
         //then
         assertEquals(FIZZ, firstOutput);
+    }
+    @Test
+    void should_return_buzz_when_count_off_given_multiple_of_5() {
+        //given
+        int secondNumber = 5;
+
+        //when
+        String secondOutput = fizzBuzz.countOff(secondNumber);
+
+        //then
+        assertEquals(BUZZ, secondOutput);
+    }
+    @Test
+    void should_return_whizz_when_count_off_given_multiple_of_7() {
+        //given
+        int thirdNumber  = 7;
+
+        //when
+        String thirdOutput = fizzBuzz.countOff(thirdNumber);
+
+        //then
+        assertEquals(WHIZZ, thirdOutput);
+    }
+    @Test
+    void should_return_fizzwhizz_when_count_off_given_multiple_of_7() {
+        //given
+        int thirdNumber  = 21;
+
+        //when
+        String thirdOutput = fizzBuzz.countOff(thirdNumber);
+
+        //then
+        assertEquals(FIZZ+WHIZZ, thirdOutput);
     }
 
 
