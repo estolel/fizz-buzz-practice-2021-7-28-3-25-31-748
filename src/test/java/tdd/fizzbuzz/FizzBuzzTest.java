@@ -30,6 +30,7 @@ public class FizzBuzzTest {
         assertEquals(FIZZ, firstOutput);
         assertEquals(BUZZ, secondOutput);
         assertEquals(WHIZZ, thirdOutput);
+        assertEquals(FIZZ+BUZZ+WHIZZ, fourthOutput);
 
     }
 
