@@ -72,7 +72,7 @@ public class FizzBuzzTest {
         String fourthOutput = fizzBuzz.countOff(fourthNumber);
 
         //then
-        assertEquals(FIZZ+WHIZZ, fourthNumber);
+        assertEquals(FIZZ+WHIZZ, fourthOutput);
     }
     @Test
     void should_return_fizzbuzz_when_count_off_given_multiple_of_5_and_3() {
