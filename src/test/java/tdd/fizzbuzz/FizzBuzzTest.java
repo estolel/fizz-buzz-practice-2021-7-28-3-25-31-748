@@ -64,7 +64,7 @@ public class FizzBuzzTest {
         assertEquals(WHIZZ, thirdOutput);
     }
     @Test
-    void should_return_fizzwhizz_when_count_off_given_multiple_of_7() {
+    void should_return_fizzwhizz_when_count_off_given_multiple_of_7_and_3() {
         //given
         int fourthNumber  = 21;
 
@@ -75,7 +75,7 @@ public class FizzBuzzTest {
         assertEquals(FIZZ+WHIZZ, fourthNumber);
     }
     @Test
-    void should_return_fizzbuzz_when_count_off_given_multiple_of_7() {
+    void should_return_fizzbuzz_when_count_off_given_multiple_of_5_and_3() {
         //given
         int number  = 15;
 
@@ -84,6 +84,17 @@ public class FizzBuzzTest {
 
         //then
         assertEquals(FIZZ+BUZZ, output);
+    }
+    @Test
+    void should_return_buzzwhizz_when_count_off_given_multiple_of_7_and_5() {
+        //given
+        int number  = 35;
+
+        //when
+        String output = fizzBuzz.countOff(number);
+
+        //then
+        assertEquals(BUZZ+WHIZZ, output);
     }
 
 
