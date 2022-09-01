@@ -106,7 +106,7 @@ public class FizzBuzzTest {
         String output = fizzBuzz.countOff(number);
 
         //then
-        assertEquals(number, output);
+        assertEquals(String.valueOf(number), output);
     }
 
 
