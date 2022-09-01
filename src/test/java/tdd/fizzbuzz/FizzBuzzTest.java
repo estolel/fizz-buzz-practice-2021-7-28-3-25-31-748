@@ -66,13 +66,24 @@ public class FizzBuzzTest {
     @Test
     void should_return_fizzwhizz_when_count_off_given_multiple_of_7() {
         //given
-        int thirdNumber  = 21;
+        int fourthNumber  = 21;
 
         //when
-        String thirdOutput = fizzBuzz.countOff(thirdNumber);
+        String fourthOutput = fizzBuzz.countOff(fourthNumber);
 
         //then
-        assertEquals(FIZZ+WHIZZ, thirdOutput);
+        assertEquals(FIZZ+WHIZZ, fourthNumber);
+    }
+    @Test
+    void should_return_fizzbuzz_when_count_off_given_multiple_of_7() {
+        //given
+        int number  = 15;
+
+        //when
+        String output = fizzBuzz.countOff(number);
+
+        //then
+        assertEquals(FIZZ+BUZZ, output);
     }
 
 
