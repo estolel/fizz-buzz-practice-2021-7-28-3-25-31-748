@@ -97,6 +97,19 @@ public class FizzBuzzTest {
         assertEquals(BUZZ+WHIZZ, output);
     }
 
+    @Test
+    void should_number_when_count_off_given_non_multiple() {
+        //given
+        int number  = 1;
+
+        //when
+        String output = fizzBuzz.countOff(number);
+
+        //then
+        assertEquals(number, output);
+    }
+
+
 
 
 
