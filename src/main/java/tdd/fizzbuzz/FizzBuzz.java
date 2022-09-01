@@ -9,6 +9,7 @@ public class FizzBuzz {
         returnString = addFizz(number, returnString);
         returnString = addBuzz(number, returnString);
         returnString = addWhizz(number, returnString);
+        if(returnString.equals("")) returnString = String.valueOf(number);
         return  returnString;
     }
 
